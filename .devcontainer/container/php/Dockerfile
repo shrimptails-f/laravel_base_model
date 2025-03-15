@@ -4,10 +4,10 @@ FROM node:20 as node_builder
 WORKDIR /app
 
 # npm の最新バージョンをインストール
-RUN npm install -g npm@latest
+RUN npm install -g npm@11.2
 
 # ====== PHP + Laravel を構築するステージ ======
-FROM php:8.2-fpm
+FROM php:8.4-fpm
 
 # 必要なシステムライブラリをインストール
 RUN apt-get update && apt-get install -y \
