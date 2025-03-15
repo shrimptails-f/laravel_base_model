@@ -18,7 +18,7 @@ services:
     container_name: app
     restart: always
     volumes:
-      - ../:/var/www/html # プロジェクトルートがビルドコンテキストなので. となる。
+      - ../:/var/www/html
     working_dir: /var/www/html
     environment:
       COMPOSER_ALLOW_SUPERUSER: 1
